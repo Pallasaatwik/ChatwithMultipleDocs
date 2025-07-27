@@ -1,41 +1,75 @@
-# Chat with PDF using Gemini 🤖📄
+# 💬 Chat with Multiple Documents using LangChain + FAISS + Streamlit
 
-A Streamlit web app that lets you chat with one or more PDF documents using Google Gemini AI. Upload your PDFs, ask questions, and get answers based on the document content—all in a sleek and user-friendly interface.
+Interact with multiple documents in a conversational way using LLMs, FAISS for retrieval, and LangChain to manage the workflow. This Streamlit app allows you to upload PDFs, embed them using Gemini API (or OpenAI), and chat with them directly!
 
-## 🚀 Live Demo
+![App Screenshot](https://github.com/Pallasaatwik/ChatwithMultipleDocs/assets/your-screenshot-id/image.png)
 
-🔗 [Click here to use the app](https://pallasaatwik-chatwithmultipledocs.streamlit.app/)
+🔗 **Live App:** [Chat with Multiple Docs](https://chatwithmultipledocs.streamlit.app/)
 
-## 📸 Screenshot
-
-![App Screenshot](./a6cc7058-4c6b-4155-b519-df1dda0ff52c.png)
+---
 
 ## ✨ Features
 
-- 🗂️ Upload single or multiple PDF documents
-- 🤖 Ask questions related to the documents
-- 🔍 Intelligent and contextual answers powered by Google Gemini
-- ⚡ Fast and interactive with real-time response
-- 📂 Chunking and vector storage using FAISS
-- 📎 File preview and content display
+- Upload multiple PDFs at once
+- Text extraction and splitting
+- FAISS VectorStore for semantic search
+- Gemini/OpenAI embeddings support
+- LangChain integration for LLM-based QA
+- Fast and simple Streamlit frontend
 
-## 🧠 Tech Stack
+---
 
-- **Frontend & UI**: Streamlit
-- **Embeddings**: `GoogleGenerativeAIEmbeddings` from `langchain_google_genai`
-- **LLM**: Gemini Pro via `ChatGoogleGenerativeAI`
-- **Vector Store**: FAISS
-- **PDF Reading**: PyPDF2
+## ⚙️ Setup Instructions (Local)
 
-## 🛠️ Setup Instructions
+### 1. Clone the Repository
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Pallasaatwik/ChatwithMultipleDocs.git
-   cd ChatwithMultipleDocs
-2. python -m venv venv
-source venv/bin/activate  # or .\venv\Scripts\activate on Windows
-Install dependencies
+```bash
+git clone https://github.com/Pallasaatwik/ChatwithMultipleDocs.git
+cd ChatwithMultipleDocs
 
+ **2. Create and Activate a Virtual Environment**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+4. Set Environment Variables
+Create a .env file in the root directory and add your API key:
 
-This project is licensed under the MIT License.
+ini
+Copy
+Edit
+GOOGLE_API_KEY=your_google_gemini_api_key
+5. Run the App
+bash
+Copy
+Edit
+streamlit run app.py
+🧠 How it Works
+Upload PDFs: The app reads and splits your uploaded PDF documents.
+
+Embedding: Text chunks are embedded using Google Gemini or OpenAI.
+
+FAISS Indexing: Embeddings are stored in a FAISS index for semantic search.
+
+Chat: LangChain enables context-aware chat based on retrieved documents.
+
+🛠️ Tech Stack
+Frontend: Streamlit
+
+LLM Framework: LangChain
+
+Embedding Models: Google Gemini API / OpenAI
+
+Vector Store: FAISS
+
+PDF Parsing: PyPDF2
+
+Environment Management: Python venv
+
+👤 Author
+Palla Saatwik Reddy
+GitHub: @Pallasaatwik
