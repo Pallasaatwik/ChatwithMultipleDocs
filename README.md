@@ -8,29 +8,22 @@ Interact with multiple documents in a conversational way using LLMs, FAISS for r
 
 ---
 
-## ✨ Features
-
-- Upload multiple PDFs at once
-- Text extraction and splitting
-- FAISS VectorStore for semantic search
-- Gemini/OpenAI embeddings support
-- LangChain integration for LLM-based QA
-- Fast and simple Streamlit frontend
-
----
-
-## ⚙️ Setup Instructions (Local)
-
-### 1. Clone the Repository
-
-```bash
+⚙️ Setup Instructions (Local)
+1. Clone the Repository
+bash
+Copy
+Edit
 git clone https://github.com/Pallasaatwik/ChatwithMultipleDocs.git
 cd ChatwithMultipleDocs
-
- **2. Create and Activate a Virtual Environment**
-```bash
+2. Create and Activate a Virtual Environment
+bash
+Copy
+Edit
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# On Linux/macOS:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
 3. Install Dependencies
 bash
 Copy
@@ -39,7 +32,7 @@ pip install -r requirements.txt
 4. Set Environment Variables
 Create a .env file in the root directory and add your API key:
 
-ini
+env
 Copy
 Edit
 GOOGLE_API_KEY=your_google_gemini_api_key
@@ -48,6 +41,7 @@ bash
 Copy
 Edit
 streamlit run app.py
+
 🧠 How it Works
 Upload PDFs: The app reads and splits your uploaded PDF documents.
 
@@ -73,3 +67,4 @@ Environment Management: Python venv
 👤 Author
 Palla Saatwik Reddy
 GitHub: @Pallasaatwik
+
