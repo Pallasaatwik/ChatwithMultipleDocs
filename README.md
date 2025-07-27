@@ -2,8 +2,7 @@
 
 Interact with multiple documents in a conversational way using LLMs, FAISS for retrieval, and LangChain to manage the workflow. This Streamlit app allows you to upload PDFs, embed them using Gemini API (or OpenAI), and chat with them directly!
 
-![App Screenshot](Screenshot 2025-07-27 163428.png
-)
+![App Screenshot](Screenshot%202025-07-27%20163428.png)
 
 🔗 **Live App:** [Chat with Multiple Docs](https://chatwithmultipledocs.streamlit.app/)
 
