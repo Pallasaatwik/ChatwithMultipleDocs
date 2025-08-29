@@ -13,7 +13,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from PIL import Image
 import gc
 
-# Load environment variables
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -42,8 +41,10 @@ def describe_image_with_gemini_pil(pil_image, page_num, img_num):
         return f"[Image description failed: {e}]"
 
 # --- Extract text + image descriptions from PDF ---
+# // for extracting text + images 
 def get_pdf_text_and_images(pdf_docs):
     text = ""
+    total=0
     total_images = 0
     
     for pdf_idx, pdf in enumerate(pdf_docs):
@@ -54,7 +55,6 @@ def get_pdf_text_and_images(pdf_docs):
 
         try:
             doc = fitz.open(temp_pdf_path)
-            
             for page_index in range(len(doc)):
                 page = doc[page_index]
                 
@@ -74,10 +74,7 @@ def get_pdf_text_and_images(pdf_docs):
                         base_image = doc.extract_image(xref)
                         img_bytes = base_image["image"]
                         
-                        
                         pil_image = Image.open(BytesIO(img_bytes))
-                        
-                        
                         if pil_image.size[0] < 50 or pil_image.size[1] < 50:
                             continue
                             
