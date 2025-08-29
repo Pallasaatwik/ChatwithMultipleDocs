@@ -8,7 +8,7 @@
 
 This Streamlit application allows you to upload PDFs, embed them using Google Gemini API (or OpenAI), and chat with them directly using advanced natural language processing techniques.
 
-![App Screenshot](Screenshot%202025-07-27%20163428.png)
+
 
 ## 🚀 Features
 
