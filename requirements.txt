@@ -9,4 +9,5 @@ langchain_google_genai
 langchain-community
 Pillow
 langgraph
-langgraph-checkpoint-sqlite
+langgraph-checkpoint-sqlite  # Based on our previous discussion
+sentence-transformers      👈 **ADD THIS LINE**
