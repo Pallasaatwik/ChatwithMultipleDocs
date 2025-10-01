@@ -10,4 +10,4 @@ langchain-community
 Pillow
 langgraph
 langgraph-checkpoint-sqlite  # Based on our previous discussion
-sentence-transformers      👈 **ADD THIS LINE**
+sentence-transformers    
